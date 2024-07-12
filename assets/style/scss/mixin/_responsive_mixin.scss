@@ -1,0 +1,13 @@
+@mixin respons($device){
+
+
+    @if $device == tablet{
+        @media (max-width: #{$breakpoint-table}){
+            @content;
+        }
+    } @else if $device == mobile {
+        @media (max-width: #{$breakpoint-mobile}){
+            @content;
+        }
+    }
+};

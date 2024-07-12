@@ -1,0 +1,86 @@
+nav{
+
+    .container{
+
+        .row{
+            padding: 16px 0;
+            @include flex(space-between,center,30px,row);
+            position: relative;
+            .logo{
+                @include flex(auto,center,5px,row);
+                
+                .burger-menu{
+
+                    display: none;
+                        @include respons(mobile){
+                            display: block;
+                        };
+                
+                }
+            }
+
+            .nav-list{
+                @include flex(auto,center,40px,row);
+
+
+                @include respons(tablet){
+                    @include flex(auto,center,20px,row);
+
+                }
+
+                @include respons(mobile){
+                    width: 0px;
+                    height: 0px;
+                    overflow: hidden;
+
+                }
+                li{
+                    a{
+                        &:hover{
+                            color: $color-07;
+                            transition: all 0.2s ease-in-out;
+                        }
+                    }
+                }
+                .search-bar{
+                    
+                    display: none;
+                    @include respons(mobile){
+                        @include flex(space-between,center,5px,row);
+                    }
+                }
+                
+            }
+            .active{
+                position: absolute;
+                z-index: 55;
+                top: 50px;
+                width: 100%;
+                height: fit-content;
+                padding: 13px;
+                transition: all 0.5s;
+                background-color: $bg-grey;
+                @include flex(flex-start,flex-start,10px,column)
+            }
+
+            .nav-info-list{
+                @include flex(auto,center,20px,row);
+
+                @include respons(tablet){
+                    @include flex(auto,center,10px,row);
+
+                }
+                @include respons(mobile){
+                    @include flex(auto,center,5px,row);
+
+                }
+                .search-bar{
+                    @include flex(auto,auto,5px,row);
+                    @include respons(mobile){
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

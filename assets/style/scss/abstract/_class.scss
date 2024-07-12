@@ -1,0 +1,92 @@
+
+.container{
+    
+    width: 80%;
+    margin: auto;
+    
+
+    @include respons(tablet){
+        width: 90%;
+
+    }
+}
+h1{
+    font-size: $h1;
+    color: $color-07;
+    font-family: $poppin;
+    font-weight: 500;
+
+    @include respons(tablet){
+        font-size:clamp(40px,2vw, 72px) ;
+    }
+    @include respons(mobile){
+        $font-size:clamp(25px,1vw,30px);
+
+    }
+}
+
+h2{
+    font-size: $h2;
+    color: $black;
+    font-family: $poppin;
+    font-weight: 500;
+
+    @include respons(tablet){
+        font-size:clamp(30px,2vw,40px) ;
+    }
+    @include respons(mobile){
+        $font-size:clamp(20px,2vw,34px);
+
+    }
+
+}
+h3{
+    font-size: $h3;
+    color:$color-07;
+    font-family: $poppin;
+    font-weight: 500;
+    @include respons(tablet){
+        font-size:clamp(30px,2vw,34px) ;
+    }
+    @include respons(mobile){
+        $font-size:clamp(20px,2vw,28px);
+
+    }
+
+}
+p{
+    font-size: $p-normal;
+    font-family: $inter;
+    color: $color-07;
+
+    @include respons(tablet){
+        font-size:clamp(16px,2vw,20px);
+    }
+    @include respons(mobile){
+        $font-size:clamp(16px,2vw,17px);
+
+    }
+}
+
+
+.p-smml{
+    color: $p-smll;
+    font-weight: 500;
+    font-family: $inter;
+}
+
+// all Color class
+
+.color-07{
+    color: $color-07;
+
+}
+.color-05{
+    color:$color-05;
+}
+.color-04{
+    color: $color-04;
+}
+.color-2{
+    color: $color-n-2;
+}

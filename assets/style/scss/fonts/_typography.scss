@@ -1,5 +1,5 @@
 
-$h1:72px;
+$h1:clamp(55px,2vw,72px);
 $h2:40px;
 $h3:34px;
 $h4:20px;
@@ -8,7 +8,7 @@ $h6:16px;
 $p-normal:20px;
 $p-sml:16px;
 $p-smll:14px;
-
+$bg-main:#F3F5F7;
 $color-07:#141718;
 $color-04:#6C7275;
 $color-n-2:#23262F;

@@ -1,0 +1,92 @@
+#category-section{
+
+    .container{
+
+
+            .row-category{
+
+                display: grid;
+                width: 100%;
+                gap: 24px;
+                grid-template-columns:repeat(2,1fr) ;
+                grid-template-rows: repeat(2,320px);
+
+                @include respons(tablet){
+
+                    // grid-template-columns:  1,1fr;
+                    // grid-template-rows: auto;
+
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px
+                };
+
+                .big-card{
+
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                    .card-content{
+                        top: 48px;
+                        left: 48px;
+                        @include respons(mobile){
+
+                            top: 25px;
+                            left: 25px;
+                        }
+                    }
+
+                    @include respons(tablet){
+                        grid-row-start: 1;
+                        grid-row-end: 1;
+                    }
+                }
+                .card{
+                    position: relative;
+               
+
+                    a{
+                        display: flex;
+                        gap: 5px;
+                        justify-content: flex-start;
+                        align-items: center;
+                        width: min-content;
+                        text-wrap: nowrap;
+                        position: relative;
+
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            bottom: -5px;
+                            width: 100%;
+                            height: 2px;
+                            background-color: black;
+
+                        }
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+
+                    .card-content{
+                        position: absolute;
+                        
+                     
+
+                    }
+                    .second{
+                        left: 30px;
+                        bottom: 40px;
+                        @include respons(mobile){
+
+                            left: 20px;
+                            bottom: 30px;
+                        }
+                    }
+                }
+
+            }
+    }
+}

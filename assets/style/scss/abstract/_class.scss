@@ -1,4 +1,6 @@
-
+.container-xl{
+    width: 100%;
+}
 .container{
     
     width: 80%;
@@ -46,10 +48,10 @@ h3{
     font-family: $poppin;
     font-weight: 500;
     @include respons(tablet){
-        font-size:clamp(30px,2vw,34px) ;
-    }
+        font-size:clamp(20px,1vw,30px) ;
+    };
     @include respons(mobile){
-        $font-size:clamp(20px,2vw,28px);
+        $font-size:clamp(5px,1vw,20px);
 
     }
 
@@ -74,6 +76,15 @@ p{
     font-weight: 500;
     font-family: $inter;
 }
+.p-sml{
+    font-size: $p-sml;
+    font-weight: 500;
+    font-family: $inter;
+
+    @include respons(mobile){
+        font-size: 14px;
+    }
+}
 
 // all Color class
 
@@ -89,4 +100,7 @@ p{
 }
 .color-2{
     color: $color-n-2;
+}
+.bg-main{
+    background-color: $bg-main;
 }

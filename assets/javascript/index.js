@@ -15,7 +15,7 @@ let currentIndex = 0;
 
 const showSlide=(index)=>{
 
-const totalSlide = slide.length;
+const totalSlide = slide.   length;
 if(index>=totalSlide){
     currentIndex = 0;
     

@@ -1,0 +1,36 @@
+#services-section{
+
+    .container{
+        
+        
+        .services-row{
+
+            @include flex(space-between,stretch,24px,row);
+            @include respons(tablet){
+
+                row-gap: 24px;
+                column-gap: 8px
+            };
+            .card{
+
+                flex: 1 0 calc(25% - 24px);
+                padding: 48px 32px;
+
+                @include respons(tablet){
+                    padding: 32px 16px;
+                    flex: 1 0 calc(50% - 24px);
+                }
+
+                .card-content{
+                    i{
+                        font-size:clamp(25px,2vw,30px);
+                    }
+                    h4{
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+        }
+    }
+}

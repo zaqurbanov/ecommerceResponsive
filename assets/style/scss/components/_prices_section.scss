@@ -1,0 +1,42 @@
+#prices-section{
+    .container-xl{
+
+        .prices-row{
+
+            @include flex(center,stretch,0,row);
+
+            @include respons(tablet){
+                @include flex(flex-start,stretch,24px,row);
+                column-gap: 24px
+            }
+            @include respons(mobile){
+                @include flex(flex-start,stretch,24px,column);
+            }
+
+            .card{
+                flex: 1 0 50%;
+
+                img{
+                    width: 100%;
+                    height: auto;
+
+                }
+                    
+               
+               
+            } 
+            .card-right{
+                @include flex(center,center,0,row);
+                    padding: 0 160px 0 72px; 
+                    
+                    @include respons(tablet){
+                        padding: 0 32px 32px;
+                    };
+                    
+                    .card-content{
+                        @include flex(flex-start,flex-start,14px,column);
+                    }
+                }
+        }
+    }
+}

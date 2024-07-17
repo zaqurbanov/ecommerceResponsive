@@ -51,9 +51,32 @@ h3{
         font-size:clamp(20px,1vw,30px) ;
     };
     @include respons(mobile){
-        $font-size:clamp(5px,1vw,20px);
+        font-size:clamp(24px,2vw,20px);
 
     }
+
+}
+h4{
+    font-size: $h4;
+   font-family: $poppin;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 28px;
+
+   @include respons(tablet){
+    font-size: clamp(14px,2vw,20px);
+   }
+}
+h5{
+    font-size: $h5;  //16px
+    color: $color-07;
+    font-family: $inter;
+    font-weight: 700;
+}
+h6{
+    font-size: $h6;
+    font-weight: 700;
+    font-style: $inter;
 
 }
 p{
@@ -72,7 +95,7 @@ p{
 
 
 .p-smml{
-    color: $p-smll;
+    font-size: $p-smml;
     font-weight: 500;
     font-family: $inter;
 }
@@ -87,7 +110,9 @@ p{
 }
 
 // all Color class
-
+.bg-green{
+    background-color: $color-green;
+}
 .color-07{
     color: $color-07;
 
@@ -103,4 +128,10 @@ p{
 }
 .bg-main{
     background-color: $bg-main;
+}
+.text-muted{
+    color: $color-04;
+}
+.color-blue{
+    color: #377DFF;
 }

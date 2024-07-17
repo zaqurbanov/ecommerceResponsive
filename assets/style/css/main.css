@@ -75,6 +75,38 @@ h3 {
     font-size: clamp(20px, 1vw, 30px);
   }
 }
+@media (max-width: 480px) {
+  h3 {
+    font-size: clamp(24px, 2vw, 20px);
+  }
+}
+
+h4 {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+@media (max-width: 768px) {
+  h4 {
+    font-size: clamp(14px, 2vw, 20px);
+  }
+}
+
+h5 {
+  font-size: 16px;
+  color: #141718;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: 700;
+  font-style: "Inter", sans-serif;
+}
+
 p {
   font-size: 20px;
   font-family: "Inter", sans-serif;
@@ -86,7 +118,7 @@ p {
   }
 }
 .p-smml {
-  color: 14px;
+  font-size: 14px;
   font-weight: 500;
   font-family: "Inter", sans-serif;
 }
@@ -100,6 +132,10 @@ p {
   .p-sml {
     font-size: 14px;
   }
+}
+
+.bg-green {
+  background-color: #38CB89;
 }
 
 .color-07 {
@@ -120,6 +156,14 @@ p {
 
 .bg-main {
   background-color: #F3F5F7;
+}
+
+.text-muted {
+  color: #6C7275;
+}
+
+.color-blue {
+  color: #377DFF;
 }
 
 nav .container .row {
@@ -416,29 +460,199 @@ header .container .header-row .header-content {
 }
 
 #product-section .container .product-row {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  #product-section .container .product-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+#product-section .container .product-row .card {
+  flex: 1 0 33%;
+  max-width: 260px;
+  min-width: 250px;
+  padding: 16px;
+  background-color: #F3F5F7;
+  position: relative;
+}
+#product-section .container .product-row .card .hearth-wrap {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0px 8px 16px -8px rgba(15, 15, 15, 0.12);
+  cursor: pointer;
+  opacity: 0;
+}
+#product-section .container .product-row .card .card-header {
+  position: relative;
+  width: 100%;
+  height: 350px;
+}
+#product-section .container .product-row .card .card-header .card-img {
+  width: 100%;
+  height: 200px;
+  height: auto;
+  max-height: fit-content;
+  position: relative;
+  top: 30%;
+  transform: translateY(-50%);
+  display: block;
+  padding: 15px;
+}
+#product-section .container .product-row .card .card-header .card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+#product-section .container .product-row .card .card-header .add-card-btn {
+  position: absolute;
+  bottom: 0px;
+  background-color: #141718;
+  padding: 8px;
+  border-radius: 8px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s;
+}
+#product-section .container .product-row .card .card-header .card-tag {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+#product-section .container .product-row .card .card-header .card-tag h5 {
+  padding: 4px 14px;
+  border-radius: 5px;
+}
+#product-section .container .product-row .card .card-header .card-tag .tag {
+  background-color: white;
+}
+#product-section .container .product-row .card .card-header .card-tag .per-cent {
+  background-color: #38CB89;
+  color: white;
+}
+#product-section .container .product-row .card:hover .add-card-btn {
+  opacity: 1;
+}
+#product-section .container .product-row .card:hover .hearth-wrap {
+  opacity: 1;
+}
+
+#services-section .container .services-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 24px;
   flex-direction: row;
   flex-wrap: wrap;
 }
-#product-section .container .product-row .card {
-  flex: 1 0 auto;
-  max-width: 262px;
-  height: 470px;
-  padding: 16px;
+@media (max-width: 768px) {
+  #services-section .container .services-row {
+    row-gap: 24px;
+    column-gap: 8px;
+  }
 }
-#product-section .container .product-row .card .card-header {
-  width: 100%;
-  max-height: 350px;
-  background-color: green;
+#services-section .container .services-row .card {
+  flex: 1 0 calc(25% - 24px);
+  padding: 48px 32px;
 }
-#product-section .container .product-row .card .card-header img {
+@media (max-width: 768px) {
+  #services-section .container .services-row .card {
+    padding: 32px 16px;
+    flex: 1 0 calc(50% - 24px);
+  }
+}
+#services-section .container .services-row .card .card-content i {
+  font-size: clamp(25px, 2vw, 30px);
+}
+#services-section .container .services-row .card .card-content h4 {
+  margin-top: 10px;
+}
+
+#prices-section .container-xl .prices-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  #prices-section .container-xl .prices-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 24px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+  }
+}
+@media (max-width: 480px) {
+  #prices-section .container-xl .prices-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 24px;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+#prices-section .container-xl .prices-row .card {
+  flex: 1 0 50%;
+}
+#prices-section .container-xl .prices-row .card img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
+  height: auto;
+}
+#prices-section .container-xl .prices-row .card-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 160px 0 72px;
+}
+@media (max-width: 768px) {
+  #prices-section .container-xl .prices-row .card-right {
+    padding: 0 32px 32px;
+  }
+}
+#prices-section .container-xl .prices-row .card-right .card-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 14px;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 /*# sourceMappingURL=main.css.map */

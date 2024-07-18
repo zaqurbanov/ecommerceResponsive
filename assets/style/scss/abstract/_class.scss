@@ -129,8 +129,14 @@ p{
 .bg-main{
     background-color: $bg-main;
 }
+.bg-black{
+    background-color: $color-07;
+}
 .text-muted{
     color: $color-04;
+}
+.text-white{
+    color: white;
 }
 .color-blue{
     color: #377DFF;
@@ -152,5 +158,5 @@ p{
 .footer-text-sml{
     font-size: 12px;
     font-family: $poppin;
-    
+
 }

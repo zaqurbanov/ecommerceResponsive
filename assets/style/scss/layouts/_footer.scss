@@ -1,0 +1,45 @@
+footer{
+    padding: 80px 0 32px 0;
+    .footer-row{
+        padding: 20px 0;
+        @include flex(space-between,center,0,row);
+
+        @include respons(mobile){
+            @include flex(flex-start,center,10px,column);
+
+        }
+        .footer-logo{
+            flex: 1 0 auto;
+            @include flex(flex-start,center,10px,row);
+            @include respons(mobile){
+                @include flex(flex-start,center,10px,column);
+
+            }
+        }
+
+        .footer-nav{
+            @include flex(space-between,center,40px,row);
+            @include respons(mobile){
+                @include flex(flex-start,center,40px,column);
+
+            }
+        }
+
+    }
+
+    .second-row{
+        border-top: 1px solid white;
+        padding: 20px 0;
+        @include flex(space-between,center,0px,row);
+        @include respons(mobile){
+            @include flex(center,center,20px,column-reverse);
+        }
+        .terms{
+            @include flex(center,center,20px,row);
+            
+        }
+        .footer-icon-container{
+            @include flex(flex-end,center,24px,row);
+        }
+    }
+}
